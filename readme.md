@@ -1,0 +1,51 @@
+
+## API Reference
+
+#### Get items
+
+```http
+  GET /tours
+```
+
+| Parameter | Type     | Description           |Example |
+| :-------- | :------- | :--------------       | :------------------------- |
+| `fields`  | `string` | Get spacific fields   |`/tours?fields=name,image` |
+| `sort`    | `string` | Get items with sort   |`/tours?sort=price` |
+| `limit`   | `number` | Fetch limited items `Defult=5`  |`/tours?limit=4` |
+| `page`    | `number` | number of pages `Defult=1`      |`/tours?page=2` |
+
+#### Get Cheapest tours
+
+```http
+  GET /tours/cheapest
+```
+
+| Parameter | Type     | Description                     |Example |
+| :-------- | :------- | :-------------------------------|:--------------- |
+| `limit`   | `number` | Fetch limited items `Defult=3`  |`/tours/cheapest?limit=1` |
+
+
+#### Get Trending tours
+
+```http
+  GET /tours/trending
+```
+
+| Parameter | Type     | Description                     |Example |
+| :-------- | :------- | :-------------------------------|:--------------- |
+| `limit`   | `number` | Fetch limited items `Defult=3`  |`/tours/trending?limit=1` |
+
+
+#### Get single item
+
+```http
+  GET /tours/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+
+
+
