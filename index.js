@@ -7,7 +7,7 @@ mongoose.connect(`mongodb+srv://abdul:abduljabbar@cluster0.cle1zkm.mongodb.net/p
 
 app.use(express.json())
 
-app.use('/tours', tourRouter)
-app.use('/', (req, res) => res.send('home'))
+app.use('/tours', tourRouter) 
+app.use('/', (req, res) => res.sendFile(__dirname+'/home.html'))
 
 app.listen(port, (res) => console.log('port is running'))
