@@ -2,7 +2,7 @@
 # Note:
 ## ami 20/9/2022 a 60 mark e submit kori, but unfortunately 21/09/2022 tarikhe practice project er sathe vule  marge kore feli 
 so i hope commit gulo  dekhe amar 60 a count hobe!!
-![alt text](https://drive.google.com/file/d/1y-kMYK_IjJsvcnVAsXlm6mZn0QA-5Nh-/view?usp=sharing)
+![alt text](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTyZAKfL6Wxz1vkmeZvS2p0WAzByf4sttQ1FXR8n5HDxCKjhb6DeEUjibuExIvX7n5kHNEtJEA=w1920-h929)
 
 
 
