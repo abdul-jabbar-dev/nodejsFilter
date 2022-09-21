@@ -6,16 +6,12 @@ module.exports.getTours = async (req, res) => {
         const query = req.query
         const fields = query.fields?.split(',')?.join(" ")
         const sort = query.sort?.split(',')?.join(" ")
-        let page = (query.page) * 1 || 1
         let limit = (query.limit) * 1 || 5
-        const result = await tourCollection.find({}, fields).sort(sort).skip((page - 1) * limit).limit(limit)
-        res.status(200).send({
-            status: "fetch complete",
-            data: result
-        })
+        const result = await tourCollection.find({}, fields).sort(sort).skip((((query.page) * 1 || 1) - 1) * limit).limit(limit)
+        res.status(200).send(result)
     } catch (error) {
         res.status(400).send({
-            status: "fetching failed",
+            status: "internal sever failed",
             massage: error.message
         })
     }
@@ -27,7 +23,7 @@ module.exports.getATour = async (req, res) => {
         res.status(200).send(find)
     } catch (error) {
         res.status(400).send({
-            status: "get single item failed",
+            status: "internal sever failed",
             massage: error.message
         })
     }
@@ -75,6 +71,7 @@ module.exports.updateATour = async (req, res) => {
 module.exports.postTours = async (req, res) => {
 
     try {
+        console.log(req.body)
         const result = await tourCollection.create(req.body)
         res.status(200).send({
             status: "insertion complete",

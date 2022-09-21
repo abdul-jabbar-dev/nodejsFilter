@@ -4,8 +4,7 @@ const { Schema } = mongoose
 const TourSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        trim: true
+        required: true
     },
     price: {
         type: Number,
@@ -27,12 +26,6 @@ const TourSchema = new Schema({
     image: {
         type: String,
         required: true
-    },
-    startingDate: {
-        type: String,
-        required: true
-    }, views: {
-        type: Number,
     }
 
 })

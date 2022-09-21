@@ -2,12 +2,12 @@ const express = require('express')
 const { getTours, postTours, getATour, updateATour, getTrendingTour, getCheapestTour } = require('../Controllers/tour.controllers')
 const tourRouter = express.Router()
 
-tourRouter.get('/', getTours)
-tourRouter.post('/', postTours)
-tourRouter.get('/trending', getTrendingTour)
-tourRouter.get('/cheapest', getCheapestTour)
-
-tourRouter.get('/:id', getATour)
-tourRouter.patch('/:id', updateATour)
+tourRouter
+.get('/', getTours)
+.post('/', postTours)
+.get('/trending', getTrendingTour)
+.get('/cheapest', getCheapestTour)
+.get('/:id', getATour)
+.patch('/:id', updateATour)
 
 module.exports = tourRouter
